@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0A1320">
+<title>邀请函 · 2026“格物启航”物理探索夏令营 | 龙岩学院物理与机电工程学院</title>
+<meta name="format-detection" content="telephone=no">
+<style>
+  :root{
+    --ink:#0A1320;        /* 最深夜空 */
+    --ink-2:#0F1D30;      /* 面板 */
+    --ink-3:#15263D;      /* 抬升面板 */
+    --glow:#EAF1FB;       /* 主文字 */
+    --mist:#9DB0C7;       /* 次文字 */
+    --faint:#6E83A0;      /* 极弱文字 */
+    --line:rgba(157,176,199,.16);
+    --line-2:rgba(157,176,199,.28);
+    --flame:#EE6A33;      /* 橙·能量/光 */
+    --azure:#4C8CE0;      /* 蓝·蓝图/理性 */
+    --gold:#E0B25A;       /* 金·礼仪/印章 */
+    --shadow:0 24px 60px -28px rgba(0,0,0,.85);
+    --serif:"Songti SC","STSong","Noto Serif SC",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",sans-serif;
+    --latin:-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #102844 0%, transparent 60%),
+      var(--ink);
+    color:var(--glow);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    -webkit-tap-highlight-color:transparent;
+    line-height:1.75;
+  }
+  /* 在桌面端把邀请函收成手机宽度，置于深色舞台中央 */
+  .stage{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    background:
+      radial-gradient(900px 500px at 50% 0%, #0d2138 0%, transparent 55%),
+      #060c15;
+  }
+  .frame{
+    width:100%;
+    max-width:440px;
+    background:var(--ink);
+    position:relative;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+
+  /* ── 通用 ── */
+  .eyebrow{
+    font-family:var(--latin);
+    font-size:11px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--faint);
+    display:flex;align-items:center;gap:9px;
+  }
+  .eyebrow .ico{flex:0 0 auto;color:var(--gold)}
+  .ico{display:inline-block;vertical-align:middle}
+  section{padding:62px 30px}
+  .kicker{
+    font-family:var(--serif);
+    font-weight:700;
+    color:var(--glow);
+    font-size:23px;
+    letter-spacing:.04em;
+    margin:16px 0 10px;
+    line-height:1.45;
+  }
+  .lede{color:var(--mist);font-size:14.5px;font-weight:300}
+  .accent-flame{color:var(--flame)}
+  .accent-azure{color:var(--azure)}
+  .accent-gold{color:var(--gold)}
+
+  /* ── 封面 ── */
+  .cover{
+    position:relative;
+    min-height:100vh;
+    min-height:100svh;
+    padding:54px 32px 40px;
+    display:flex;flex-direction:column;
+    background:
+      radial-gradient(120% 70% at 50% 12%, rgba(76,140,224,.16), transparent 60%),
+      radial-gradient(90% 50% at 80% 90%, rgba(238,106,51,.12), transparent 60%),
+      linear-gradient(180deg,#0A1320 0%, #0C1A2C 100%);
+    overflow:hidden;
+  }
+  .stars{position:absolute;inset:0;pointer-events:none}
+  .cover-head{position:relative;z-index:2}
+  .org{
+    font-size:12.5px;letter-spacing:.18em;color:var(--mist);font-weight:500;
+  }
+  .org b{color:var(--glow);font-weight:700}
+  .cover-mid{
+    position:relative;z-index:2;
+    margin-top:auto;margin-bottom:auto;
+    text-align:center;
+  }
+  .seal-wrap{display:flex;justify-content:center;margin-bottom:30px}
+  .seal{
+    width:148px;height:148px;cursor:pointer;
+    background:none;border:0;padding:0;display:block;
+    filter:drop-shadow(0 0 22px rgba(224,178,90,.28));
+    transition:transform .5s cubic-bezier(.2,.8,.2,1);
+  }
+  .seal:hover{transform:scale(1.04)}
+  .seal:focus-visible{outline:2px solid var(--gold);outline-offset:8px;border-radius:50%}
+  .seal .orbit-grp{transform-origin:74px 74px;animation:spin 9s linear infinite}
+  .seal .orbit-grp.two{animation-duration:14s;animation-direction:reverse}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .seal-char{
+    font-family:var(--serif);font-weight:900;fill:var(--gold);
+  }
+
+  .invite-title{
+    font-family:var(--serif);font-weight:900;
+    letter-spacing:.5em;
+    font-size:46px;line-height:1;
+    margin:0 0 0 .5em;
+    color:var(--glow);
+    text-shadow:0 0 30px rgba(76,140,224,.25);
+  }
+  .invite-sub{
+    margin-top:20px;font-family:var(--serif);font-weight:500;
+    font-size:18px;letter-spacing:.06em;color:var(--gold);
+  }
+  .invite-line{
+    margin-top:8px;font-size:13px;color:var(--mist);letter-spacing:.04em;
+  }
+  .cover-foot{position:relative;z-index:2;text-align:center}
+  .cover-when{
+    font-family:var(--latin);font-size:14px;letter-spacing:.14em;
+    color:var(--glow);margin-bottom:18px;
+  }
+  .cover-when span{color:var(--faint);margin:0 8px}
+  .open-btn{
+    appearance:none;border:1px solid var(--line-2);background:rgba(234,241,251,.04);
+    color:var(--glow);font-family:var(--sans);font-size:13.5px;letter-spacing:.22em;
+    padding:12px 26px;border-radius:999px;cursor:pointer;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:border-color .3s,background .3s,transform .3s;
+  }
+  .open-btn:hover{border-color:var(--gold);background:rgba(224,178,90,.08);transform:translateY(-1px)}
+  .open-btn .chev{animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+  /* ── 诚邀正文 ── */
+  .letter{background:var(--ink-2)}
+  .letter p{font-size:15px;color:#D2DDEC;font-weight:300;margin:0 0 18px}
+  .letter p strong{color:var(--glow);font-weight:700}
+  .letter .pull{
+    font-family:var(--serif);font-weight:700;font-size:19px;line-height:1.7;
+    color:var(--glow);margin:26px 0 6px;letter-spacing:.02em;
+  }
+  .letter .pull em{font-style:normal;color:var(--flame)}
+
+  /* ── 信息条 ── */
+  .facts{background:var(--ink)}
+  .fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+  .fact{
+    border:1px solid var(--line);border-radius:14px;padding:18px 16px;
+    background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
+  }
+  .fact .lab{font-family:var(--latin);font-size:10.5px;letter-spacing:.22em;color:var(--faint);text-transform:uppercase}
+  .fact .val{font-family:var(--serif);font-weight:700;font-size:20px;margin-top:7px;color:var(--glow)}
+  .fact .note{font-size:12px;color:var(--mist);margin-top:3px}
+  .fact.span{grid-column:1 / -1}
+  .fact.span .val{font-size:17px;font-weight:500;font-family:var(--sans)}
+  .fact.span .val b{font-family:var(--serif);color:var(--gold);font-size:22px;margin-right:4px}
+
+  /* ── 四种能力 ── */
+  .skills{background:var(--ink-2)}
+  .skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+  .skill{
+    background:var(--ink-3);border:1px solid var(--line);border-radius:16px;
+    padding:20px 18px;position:relative;overflow:hidden;
+  }
+  .skill .bar{position:absolute;left:0;top:0;bottom:0;width:3px}
+  .skill .si{height:30px;color:var(--glow);opacity:.92}
+  .skill .sn{font-family:var(--serif);font-weight:700;font-size:21px;margin-top:14px;letter-spacing:.16em}
+  .skill .sd{font-size:12.5px;color:var(--mist);margin-top:5px}
+  .s1 .bar{background:var(--azure)} .s1 .si{color:var(--azure)}
+  .s2 .bar{background:var(--flame)} .s2 .si{color:var(--flame)}
+  .s3 .bar{background:var(--gold)}  .s3 .si{color:var(--gold)}
+  .s4 .bar{background:#7FA8D8}      .s4 .si{color:#7FA8D8}
+
+  /* ── 三类营种 ── */
+  .camps{background:var(--ink)}
+  .camp{
+    border:1px solid var(--line);border-radius:18px;padding:22px 20px;margin-top:16px;
+    background:linear-gradient(180deg,rgba(255,255,255,.025),transparent);
+    position:relative;
+  }
+  .camp .top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+  .camp .no{font-family:var(--latin);font-size:13px;letter-spacing:.1em;color:var(--faint)}
+  .camp .nm{font-family:var(--serif);font-weight:700;font-size:20px;margin-top:2px;color:var(--glow)}
+  .camp .tag{
+    flex:0 0 auto;font-size:11.5px;letter-spacing:.08em;padding:5px 12px;border-radius:999px;
+    border:1px solid currentColor;white-space:nowrap;margin-top:2px;
+  }
+  .camp .row{margin-top:16px;font-size:13px}
+  .camp .row .k{color:var(--faint);font-family:var(--latin);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase}
+  .camp .row .v{color:#D2DDEC;margin-top:4px}
+  .camp .grow{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--serif);font-weight:700;font-size:15px}
+  .c1{--c:var(--azure)} .c2{--c:var(--flame)} .c3{--c:var(--gold)}
+  .camp .tag{color:var(--c)} .camp .grow{color:var(--c)} .camp .no{color:var(--c)}
+
+  /* ── 五日行程 ── */
+  .journey{background:var(--ink-2)}
+  .rail{position:relative;margin-top:28px;padding-left:30px}
+  .rail::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:1.5px;
+    background:linear-gradient(180deg,var(--azure),var(--flame),var(--gold))}
+  .day{position:relative;padding:0 0 26px}
+  .day:last-child{padding-bottom:0}
+  .day .dot{position:absolute;left:-30px;top:3px;width:15px;height:15px;border-radius:50%;
+    background:var(--ink-2);border:2px solid var(--azure);box-shadow:0 0 0 4px var(--ink-2)}
+  .day:nth-child(2) .dot{border-color:var(--flame)}
+  .day:nth-child(3) .dot{border-color:var(--gold)}
+  .day:nth-child(4) .dot{border-color:var(--azure)}
+  .day:nth-child(5) .dot{border-color:var(--flame)}
+  .day .dlab{font-family:var(--latin);font-size:11px;letter-spacing:.24em;color:var(--gold)}
+  .day .dname{font-family:var(--serif);font-weight:700;font-size:18px;margin:4px 0 4px}
+  .day .ddesc{font-size:12.5px;color:var(--mist)}
+
+  /* ── 费用 / 适合 ── */
+  .include{background:var(--ink)}
+  .incl-box{
+    border:1px solid var(--line);border-radius:16px;padding:22px 20px;margin-top:22px;
+    background:linear-gradient(180deg,rgba(76,140,224,.06),transparent);
+  }
+  .incl-box .h{font-family:var(--serif);font-weight:700;font-size:16px;color:var(--gold);margin-bottom:10px}
+  .incl-box .items{display:flex;flex-wrap:wrap;gap:8px}
+  .pill{font-size:12.5px;color:#D2DDEC;border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+  .fit-list{margin-top:26px;display:flex;flex-direction:column;gap:14px}
+  .fit{display:flex;gap:14px;align-items:flex-start}
+  .fit .n{flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+    font-family:var(--latin);font-size:12px;font-weight:600;color:var(--ink);}
+  .fit:nth-child(1) .n{background:var(--azure)}
+  .fit:nth-child(2) .n{background:var(--flame)}
+  .fit:nth-child(3) .n{background:var(--gold)}
+  .fit .t{font-size:13.5px;color:#D2DDEC;padding-top:2px}
+
+  /* ── 支撑 ── */
+  .support{background:var(--ink-2)}
+  .sup{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .sup:last-child{border-bottom:0}
+  .sup .si{flex:0 0 auto;color:var(--gold);margin-top:2px}
+  .sup .st{font-family:var(--serif);font-weight:700;font-size:15.5px;color:var(--glow)}
+  .sup .sd{font-size:12.5px;color:var(--mist);margin-top:3px}
+
+  /* ── 报名 ── */
+  .signup{
+    background:linear-gradient(180deg,#0C1A2C,#0A1320);
+    text-align:center;padding-bottom:50px;
+  }
+  .closing{
+    font-family:var(--serif);font-weight:700;font-size:18px;line-height:1.7;
+    color:var(--glow);max-width:300px;margin:0 auto 34px;
+  }
+  .closing em{font-style:normal;color:var(--flame)}
+  .qr{
+    width:160px;height:160px;margin:0 auto;border-radius:18px;
+    background:var(--glow);display:grid;place-items:center;padding:14px;
+  }
+  .qr svg{width:100%;height:100%}
+  .qr-note{font-size:12px;color:var(--mist);margin-top:14px;letter-spacing:.02em}
+  .reg-when{font-family:var(--latin);font-size:15px;letter-spacing:.1em;color:var(--gold);margin-top:26px}
+  .sign{margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+  .sign .o{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--glow);letter-spacing:.06em}
+  .sign .o2{font-size:12.5px;color:var(--mist);margin-top:6px}
+  .sign .date{font-family:var(--latin);font-size:12px;color:var(--faint);letter-spacing:.14em;margin-top:14px}
+
+  /* ── 滚动揭示动画 ── */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}
+  .reveal.d2{transition-delay:.16s}
+  .reveal.d3{transition-delay:.24s}
+
+  /* ── 对标特色班 徽章 ── */
+  .benchmark{
+    margin:28px auto 4px;max-width:312px;
+    padding:15px 18px 17px;
+    border:1px solid rgba(224,178,90,.5);border-radius:16px;
+    background:rgba(224,178,90,.06);
+    box-shadow:0 0 34px -6px rgba(224,178,90,.28);
+    text-align:center;
+  }
+  .bm-label{
+    font-family:var(--serif);font-weight:700;color:var(--gold);
+    letter-spacing:.34em;font-size:12.5px;display:block;margin-bottom:12px;
+  }
+  .bm-chips{display:flex;justify-content:center;gap:9px}
+  .chip{
+    font-style:normal;font-family:var(--serif);font-weight:700;font-size:16px;
+    padding:7px 0;width:76px;border-radius:11px;border:1px solid currentColor;
+    background:rgba(255,255,255,.03);
+  }
+  .chip.f{color:var(--flame)} .chip.a{color:var(--azure)} .chip.g{color:var(--gold)}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1!important;transform:none!important;transition:none}
+    .seal .orbit-grp{animation:none}
+    .open-btn .chev{animation:none}
+    .seal{transition:none}
+  }
+  @media (max-width:380px){
+    section{padding:54px 24px}
+    .cover{padding:48px 26px 36px}
+    .invite-title{font-size:40px}
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+<div class="frame" id="frame">
+
+  <!-- ════════ 封面 ════════ -->
+  <header class="cover" id="cover">
+    <svg class="stars" viewBox="0 0 440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="#EAF1FB">
+        <circle cx="40" cy="120" r="1" opacity=".5"/><circle cx="120" cy="60" r="1.3" opacity=".7"/>
+        <circle cx="220" cy="100" r="1" opacity=".4"/><circle cx="350" cy="70" r="1.4" opacity=".6"/>
+        <circle cx="400" cy="160" r="1" opacity=".5"/><circle cx="70" cy="230" r="1.1" opacity=".55"/>
+        <circle cx="300" cy="200" r="1" opacity=".4"/><circle cx="190" cy="260" r="1.3" opacity=".6"/>
+        <circle cx="410" cy="320" r="1" opacity=".5"/><circle cx="30" cy="400" r="1.2" opacity=".5"/>
+        <circle cx="150" cy="760" r="1" opacity=".5"/><circle cx="360" cy="700" r="1.3" opacity=".55"/>
+        <circle cx="60" cy="640" r="1" opacity=".4"/><circle cx="410" cy="600" r="1.1" opacity=".5"/>
+        <circle cx="250" cy="820" r="1.2" opacity=".55"/><circle cx="330" cy="850" r="1" opacity=".4"/>
+      </g>
+    </svg>
+
+    <div class="cover-head">
+      <div class="org"><b>龙岩学院</b> · 物理与机电工程学院</div>
+    </div>
+
+    <div class="cover-mid">
+      <div class="seal-wrap">
+        <button class="seal" id="seal" aria-label="开启邀请">
+          <svg viewBox="0 0 148 148">
+            <circle cx="74" cy="74" r="62" fill="none" stroke="#E0B25A" stroke-width="1" opacity=".55"/>
+            <circle cx="74" cy="74" r="54" fill="none" stroke="#E0B25A" stroke-width=".6" opacity=".3"/>
+            <g class="orbit-grp">
+              <ellipse cx="74" cy="74" rx="50" ry="20" fill="none" stroke="#4C8CE0" stroke-width="1.1" opacity=".7"/>
+              <circle cx="124" cy="74" r="3.4" fill="#4C8CE0"/>
+            </g>
+            <g class="orbit-grp two">
+              <ellipse cx="74" cy="74" rx="50" ry="20" fill="none" stroke="#EE6A33" stroke-width="1.1" opacity=".7" transform="rotate(60 74 74)"/>
+              <circle cx="74" cy="74" r="3" fill="#EE6A33" transform="translate(43.3 -25)"/>
+            </g>
+            <circle cx="74" cy="74" r="6" fill="#E0B25A"/>
+            <text class="seal-char" x="74" y="118" text-anchor="middle" font-size="20" letter-spacing="2">格物启航</text>
+          </svg>
+        </button>
+      </div>
+
+      <h1 class="invite-title">邀请函</h1>
+      <div class="invite-sub">2026 “格物启航” 物理探索夏令营</div>
+      <div class="invite-line">龙岩学院中小学科学（物理）学科素养拓展夏令营</div>
+      <div class="benchmark">
+        <span class="bm-label">对 标 特 色 班</span>
+        <span class="bm-chips">
+          <i class="chip f">龙腾班</i><i class="chip a">培德班</i><i class="chip g">实验班</i>
+        </span>
+      </div>
+    </div>
+
+    <div class="cover-foot">
+      <div class="cover-when">7.20<span>—</span>7.24 · 龙岩学院</div>
+      <button class="open-btn" id="openBtn">开启邀请
+        <svg class="chev ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ════════ 诚邀正文 ════════ -->
+  <section class="letter" id="letter">
+    <div class="eyebrow reveal">
+      <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+      致家长与同学
+    </div>
+    <h2 class="kicker reveal d1">这个夏天，<br>请让孩子走进大学的实验室。</h2>
+    <p class="reveal d2">五天四晚，封闭式开展。我们不急着提前刷完课本——<strong>更重要的，是让孩子学会提问、学会建模、学会动手验证，面对陌生问题也能找到突破口。</strong></p>
+    <p class="reveal d2">在真实的实验与名师启发中，看见真实的物理现象，提取关键变量，用证据修正判断，再把过程与结论讲清楚。这正是进入特色培养之前，最需要的底层方法。</p>
+    <div class="pull reveal d3">瞄准特色班，<br><em>现在就开始准备。</em></div>
+  </section>
+
+  <!-- ════════ 营期信息 ════════ -->
+  <section class="facts" id="facts">
+    <div class="eyebrow reveal">
+      <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      营期信息 · CAMP DETAILS
+    </div>
+    <h2 class="kicker reveal d1">一份约定</h2>
+    <div class="fact-grid">
+      <div class="fact reveal d1"><div class="lab">When</div><div class="val">7.20–7.24</div><div class="note">2026年 · 5天4晚</div></div>
+      <div class="fact reveal d1"><div class="lab">Where</div><div class="val">龙岩学院</div><div class="note">校内 · 封闭式开展</div></div>
+      <div class="fact reveal d2"><div class="lab">Class</div><div class="val">30人+</div><div class="note">每班达此人数即开班</div></div>
+      <div class="fact reveal d2"><div class="lab">Fee</div><div class="val accent-flame">2250<span style="font-size:13px;font-weight:400;color:var(--mist)"> 元/人</span></div><div class="note">营费标准</div></div>
+      <div class="fact span reveal d3"><div class="lab">Included</div><div class="val"><b>含</b>住宿 · 餐饮 · 保险 · 资料及耗材费</div></div>
+    </div>
+  </section>
+
+  <!-- ════════ 四种能力 ════════ -->
+  <section class="skills" id="skills">
+    <div class="eyebrow reveal">
+      <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+      训练什么 · FOUR ABILITIES
+    </div>
+    <h2 class="kicker reveal d1">特色班需要什么，<br>我们就训练什么</h2>
+    <p class="lede reveal d1">学生不是被动接收结论，而是在真实任务中理解概念、修正判断，逐步形成对新情境也能迁移的方法。</p>
+    <div class="skill-grid">
+      <div class="skill s1 reveal d1"><div class="bar"></div>
+        <svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+        <div class="sn">看见</div><div class="sd">观察真实现象</div></div>
+      <div class="skill s2 reveal d1"><div class="bar"></div>
+        <svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/></svg>
+        <div class="sn">思考</div><div class="sd">提取关键变量</div></div>
+      <div class="skill s3 reveal d2"><div class="bar"></div>
+        <svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 3h6M10 3v5l-4.5 8a2 2 0 0 0 1.8 3h9.4a2 2 0 0 0 1.8-3L14 8V3"/></svg>
+        <div class="sn">实验</div><div class="sd">用证据验证判断</div></div>
+      <div class="skill s4 reveal d2"><div class="bar"></div>
+        <svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 11l18-6-6 18-3-7-9-5z"/></svg>
+        <div class="sn">表达</div><div class="sd">讲清过程与结论</div></div>
+    </div>
+  </section>
+
+  <!-- ════════ 三类营种 ════════ -->
+  <section class="camps" id="camps">
+    <div class="eyebrow reveal">
+      <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 17l6-6 4 4 7-8"/><path d="M3 21h18"/></svg>
+      三类营种 · 精准进阶
+    </div>
+    <h2 class="kicker reveal d1">对标龙腾班、培德班、实验班，<br>三条路径连续进阶</h2>
+    <span class="bm-chips reveal d1" style="justify-content:flex-start;margin:14px 0 4px">
+      <i class="chip f">龙腾班</i><i class="chip a">培德班</i><i class="chip g">实验班</i>
+    </span>
+
+    <div class="camp c1 reveal d1">
+      <div class="top">
+        <div><div class="no">01</div><div class="nm">科学启蒙营</div></div>
+        <div class="tag">高年级小学生</div>
+      </div>
+      <div class="row"><div class="k">对标能力</div><div class="v">科学兴趣 · 观察提问 · 实验规范</div></div>
+      <div class="grow">更早显现科学潜质</div>
+    </div>
+
+    <div class="camp c2 reveal d2">
+      <div class="top">
+        <div><div class="no">02</div><div class="nm">物理探究营</div></div>
+        <div class="tag">优秀初中生</div>
+      </div>
+      <div class="row"><div class="k">对标能力</div><div class="v">核心概念 · 典型模型 · 压轴思维</div></div>
+      <div class="grow">看懂问题背后的结构</div>
+    </div>
+
+    <div class="camp c3 reveal d3">
+      <div class="top">
+        <div><div class="no">03</div><div class="nm">卓越先修营</div></div>
+        <div class="tag">高中拔尖培养</div>
+      </div>
+      <div class="row"><div class="k">对标能力</div><div class="v">数学建模 · 实验设计 · 综合攻坚</div></div>
+      <div class="grow">拓展大学视野与高阶思维</div>
+    </div>
+  </section>
+
+  <!-- ════════ 五日行程 ════════ -->
+  <section class="journey" id="journey">
+    <div class="eyebrow reveal">
+      <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+      五日行程 · FIVE-DAY JOURNEY
+    </div>
+    <h2 class="kicker reveal d1">5天4晚，<br>每一天对应一项关键成长</h2>
+    <div class="rail">
+      <div class="day reveal d1"><div class="dot"></div><div class="dlab">DAY 1</div><div class="dname">入营与探索</div><div class="ddesc">测评 · 校园参观 · 实验室导览 · 安全教育</div></div>
+      <div class="day reveal d1"><div class="dot"></div><div class="dlab">DAY 2</div><div class="dname">概念与突破</div><div class="ddesc">分层课程 · 实验探究 · 科学阅读或习题诊断</div></div>
+      <div class="day reveal d2"><div class="dot"></div><div class="dlab">DAY 3</div><div class="dname">名师与模型</div><div class="ddesc">龙岩市物理名师专题 · 模型表达训练</div></div>
+      <div class="day reveal d2"><div class="dot"></div><div class="dlab">DAY 4</div><div class="dname">综合攻坚</div><div class="ddesc">名师拓展课程 · 综合实践或强基专题训练</div></div>
+      <div class="day reveal d3"><div class="dot"></div><div class="dlab">DAY 5</div><div class="dname">展示与反馈</div><div class="ddesc">成果展示 · 学习反馈 · 成长建议</div></div>
+    </div>
+  </section>
+
+  <!-- ════════ 适合的孩子 ════════ -->
+  <section class="include" id="include">
+    <div class="eyebrow reveal">
+      <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 6L9 17l-5-5"/></svg>
+      适合这样的孩子
+    </div>
+    <h2 class="kicker reveal d1">如果是为他/她准备的</h2>
+    <div class="fit-list">
+      <div class="fit reveal d1"><div class="n">1</div><div class="t">瞄准龙腾班、培德班、实验班等特色培养方向</div></div>
+      <div class="fit reveal d2"><div class="n">2</div><div class="t">希望系统提升概念、模型、实验与陌生问题攻坚能力</div></div>
+      <div class="fit reveal d3"><div class="n">3</div><div class="t">未来有志于强基计划、学科竞赛或拔尖创新培养</div></div>
+    </div>
+    <div class="incl-box reveal d1">
+      <div class="h">营费包含</div>
+      <div class="items">
+        <span class="pill">住宿（5天4晚）</span><span class="pill">餐饮</span><span class="pill">保险</span><span class="pill">资料及耗材费</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ 支撑 ════════ -->
+  <section class="support" id="support">
+    <div class="eyebrow reveal">
+      <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l3 6 6 .9-4.5 4.3L17.5 20 12 16.8 6.5 20l1-6.8L3 8.9 9 8z"/></svg>
+      谁在支撑 · FACULTY
+    </div>
+    <h2 class="kicker reveal d1">名师与大学平台，<br>支撑成长的关键一步</h2>
+    <div class="sup reveal d1">
+      <svg class="si" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7M6 11v4c0 1.5 3 3 6 3s6-1.5 6-3v-4"/></svg>
+      <div><div class="st">龙岩市教学名师团队</div><div class="sd">长期深耕中学一线，专注尖子生培养与课堂提质，育人经验丰富。</div></div>
+    </div>
+    <div class="sup reveal d2">
+      <svg class="si" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21h18M5 21V11l7-5 7 5v10M9 21v-6h6v6"/></svg>
+      <div><div class="st">龙岩学院大学平台</div><div class="sd">大学物理、工程应用、实验平台与创新实践课程，在真实情境中理解物理。</div></div>
+    </div>
+    <div class="sup reveal d3">
+      <svg class="si" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 3h6M10 3v5l-4.5 8a2 2 0 0 0 1.8 3h9.4a2 2 0 0 0 1.8-3L14 8V3"/></svg>
+      <div><div class="st">实验课程支持团队</div><div class="sd">真实实验 · 器材指导 · 成果展示与安全规范。</div></div>
+    </div>
+  </section>
+
+  <!-- ════════ 报名 ════════ -->
+  <section class="signup" id="signup">
+    <div class="closing reveal">不是“讲得更多”，<br>而是让孩子更早看见<br>方法、差距与<em>下一步成长方向</em>。</div>
+
+    <div class="qr reveal d1" aria-label="报名二维码占位">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <rect width="100" height="100" fill="#EAF1FB"/>
+        <g fill="#0A1320">
+          <rect x="6" y="6" width="22" height="22"/><rect x="11" y="11" width="12" height="12" fill="#EAF1FB"/><rect x="14" y="14" width="6" height="6" fill="#0A1320"/>
+          <rect x="72" y="6" width="22" height="22"/><rect x="77" y="11" width="12" height="12" fill="#EAF1FB"/><rect x="80" y="14" width="6" height="6" fill="#0A1320"/>
+          <rect x="6" y="72" width="22" height="22"/><rect x="11" y="77" width="12" height="12" fill="#EAF1FB"/><rect x="14" y="80" width="6" height="6" fill="#0A1320"/>
+          <rect x="36" y="8" width="5" height="5"/><rect x="46" y="8" width="5" height="5"/><rect x="58" y="8" width="5" height="5"/>
+          <rect x="8" y="36" width="5" height="5"/><rect x="20" y="36" width="5" height="5"/><rect x="36" y="36" width="5" height="5"/><rect x="48" y="36" width="5" height="5"/><rect x="60" y="36" width="5" height="5"/><rect x="72" y="36" width="5" height="5"/><rect x="86" y="36" width="5" height="5"/>
+          <rect x="14" y="48" width="5" height="5"/><rect x="30" y="48" width="5" height="5"/><rect x="42" y="48" width="5" height="5"/><rect x="56" y="48" width="5" height="5"/><rect x="68" y="48" width="5" height="5"/><rect x="80" y="48" width="5" height="5"/>
+          <rect x="8" y="60" width="5" height="5"/><rect x="24" y="60" width="5" height="5"/><rect x="40" y="60" width="5" height="5"/><rect x="52" y="60" width="5" height="5"/><rect x="64" y="60" width="5" height="5"/><rect x="86" y="60" width="5" height="5"/>
+          <rect x="38" y="72" width="5" height="5"/><rect x="50" y="74" width="5" height="5"/><rect x="62" y="72" width="5" height="5"/><rect x="74" y="78" width="5" height="5"/><rect x="86" y="72" width="5" height="5"/>
+          <rect x="38" y="86" width="5" height="5"/><rect x="52" y="86" width="5" height="5"/><rect x="68" y="86" width="5" height="5"/><rect x="86" y="86" width="5" height="5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="qr-note reveal d1">报名二维码 · 以学院正式发布通知为准</div>
+
+    <div class="reg-when reveal d2">活动时间 · 2026.07.20 — 07.24</div>
+    <div class="qr-note reveal d2" style="max-width:280px;margin-left:auto;margin-right:auto">报名方式、联系人和咨询电话<br>请以学院正式发布通知为准</div>
+
+    <div class="sign reveal d3">
+      <div class="o">龙岩学院 · 物理与机电工程学院</div>
+      <div class="o2">“格物启航” 物理探索夏令营</div>
+      <div class="date">GEWU QIHANG · PHYSICS CAMP 2026</div>
+    </div>
+  </section>
+
+</div>
+</div>
+
+<script>
+  // 滚动揭示
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // 开启邀请：平滑滚到正文
+  function openInvite(){
+    var t = document.getElementById('letter');
+    if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  document.getElementById('openBtn').addEventListener('click', openInvite);
+  document.getElementById('seal').addEventListener('click', openInvite);
+</script>
+</body>
+</html>
